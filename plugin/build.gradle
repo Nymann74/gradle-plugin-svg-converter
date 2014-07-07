@@ -1,8 +1,8 @@
-final REPOSITORY_URL = 'https://github.com/gfx/gradle-plugin-template'
+final REPOSITORY_URL = 'https://github.com/perj74/gradle-plugin-svg-converter'
 
-final GROUP_ID = 'com.github.gfx'
-final ARTIFACT_ID = 'gralde-plugin-template'
-final VERSION = '0.0.0'
+final GROUP_ID = 'com.trifork.android.tools'
+final ARTIFACT_ID = 'gradle-plugin-svg-converter'
+final VERSION = '0.0.1'
 
 buildscript {
     repositories {
@@ -25,6 +25,9 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
     compile 'com.android.tools.build:gradle:+'
+    compile 'org.apache.xmlgraphics:batik-codec:1.7'
+    compile 'org.apache.xmlgraphics:batik-rasterizer:1.7'
+    compile 'org.apache.commons:commons-io:1.3.2'
 }
 
 // artifact settings
@@ -71,8 +74,8 @@ uploadArchives {
 
 modifyPom {
     project {
-        name 'Android Gradle Plugin Template'
-        description 'Hello, world!'
+        name 'Android Gradle Plugin SVG Converter'
+        description 'SVG Converter for android'
         url REPOSITORY_URL
         inceptionYear '2014'
 
@@ -90,9 +93,9 @@ modifyPom {
 
         developers {
             developer {
-                id 'gfx'
-                name 'FUJI Goro'
-                email 'gfuji@cpan.org'
+                id 'perj74'
+                name 'Per Nymann Jørgensen'
+                email 'pnj@trifork.com'
             }
         }
     }
